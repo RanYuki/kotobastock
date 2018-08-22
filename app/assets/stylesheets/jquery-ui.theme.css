@@ -1,0 +1,443 @@
+/*!
+ * jQuery UI CSS Framework 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?scope=kotobastock&folderName=kotobastock&bgImgOpacityError=&bgImgOpacityHighlight=&bgImgOpacityActive=&bgImgOpacityHover=&bgImgOpacityDefault=&bgImgOpacityContent=&bgImgOpacityHeader=70&cornerRadiusShadow=8px&offsetLeftShadow=0px&offsetTopShadow=0px&thicknessShadow=5px&opacityShadow=30&bgImgOpacityShadow=0&bgTextureShadow=flat&bgColorShadow=%23666666&opacityOverlay=30&bgImgOpacityOverlay=50&bgTextureOverlay=diamond_ripple&bgColorOverlay=%23dcdcdc&iconColorError=%23e1684d&fcError=%23e1684d&borderColorError=%23f0c5bd&bgTextureError=flat&bgColorError=%23fdfadf&iconColorHighlight=%23ffffff&fcHighlight=%23ffffff&borderColorHighlight=%23033569&bgTextureHighlight=flat&bgColorHighlight=%23ecdcf0&iconColorActive=%23ffffff&fcActive=%23ffffff&borderColorActive=%23033569&bgTextureActive=flat&bgColorActive=%23b5dfe5&iconColorHover=%23555555&fcHover=%232b2b2b&borderColorHover=%23ffffff&bgTextureHover=flat&bgColorHover=%23fec7ba&iconColorDefault=%23777777&fcDefault=%23454545&borderColorDefault=%23ffffff&bgTextureDefault=flat&bgColorDefault=%23ffffff&iconColorContent=%23033569&fcContent=%23333333&borderColorContent=%23dddddd&bgTextureContent=flat&bgColorContent=%23ffffff&iconColorHeader=%23033569&fcHeader=%23033569&borderColorHeader=%23e7e5e5&bgTextureHeader=diamond_ripple&bgColorHeader=%23b5dfe5&cornerRadius=2px&fwDefault=normal&fsDefault=1em&ffDefault=HelveticaNeue-Light%2Chelvetica%2CArial%2C%22%E3%83%A1%E3%82%A4%E3%83%AA%E3%82%AA%22%2CMeiryo%2Csans-serif%3B
+ */
+
+
+/* Component containers
+----------------------------------*/
+kotobastock .ui-widget {
+	font-family: HelveticaNeue-Light,helvetica,Arial,"メイリオ",Meiryo,sans-serif;;
+	font-size: 1em;
+}
+kotobastock .ui-widget .ui-widget {
+	font-size: 1em;
+}
+kotobastock .ui-widget input,
+kotobastock .ui-widget select,
+kotobastock .ui-widget textarea,
+kotobastock .ui-widget button {
+	font-family: HelveticaNeue-Light,helvetica,Arial,"メイリオ",Meiryo,sans-serif;;
+	font-size: 1em;
+}
+kotobastock .ui-widget.ui-widget-content {
+	border: 1px solid #ffffff;
+}
+kotobastock .ui-widget-content {
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	color: #333333;
+}
+kotobastock .ui-widget-content a {
+	color: #333333;
+}
+kotobastock .ui-widget-header {
+	border: 1px solid #e7e5e5;
+	background: #b5dfe5 url("images/ui-bg_diamond-ripple_70_b5dfe5_22x22.png") 50% 50% repeat;
+	color: #033569;
+	font-weight: bold;
+}
+kotobastock .ui-widget-header a {
+	color: #033569;
+}
+
+/* Interaction states
+----------------------------------*/
+kotobastock .ui-state-default,
+kotobastock .ui-widget-content .ui-state-default,
+kotobastock .ui-widget-header .ui-state-default,
+kotobastock .ui-button,
+
+/* We use html here because we need a greater specificity to make sure disabled
+works properly when clicked or hovered */
+html kotobastock .ui-button.ui-state-disabled:hover,
+html kotobastock .ui-button.ui-state-disabled:active {
+	border: 1px solid #ffffff;
+	background: #ffffff;
+	font-weight: normal;
+	color: #454545;
+}
+kotobastock .ui-state-default a,
+kotobastock .ui-state-default a:link,
+kotobastock .ui-state-default a:visited,
+akotobastock .ui-button,
+a:linkkotobastock .ui-button,
+a:visitedkotobastock .ui-button,
+kotobastock .ui-button {
+	color: #454545;
+	text-decoration: none;
+}
+kotobastock .ui-state-hover,
+kotobastock .ui-widget-content .ui-state-hover,
+kotobastock .ui-widget-header .ui-state-hover,
+kotobastock .ui-state-focus,
+kotobastock .ui-widget-content .ui-state-focus,
+kotobastock .ui-widget-header .ui-state-focus,
+kotobastock .ui-button:hover,
+kotobastock .ui-button:focus {
+	border: 1px solid #ffffff;
+	background: #fec7ba;
+	font-weight: normal;
+	color: #2b2b2b;
+}
+kotobastock .ui-state-hover a,
+kotobastock .ui-state-hover a:hover,
+kotobastock .ui-state-hover a:link,
+kotobastock .ui-state-hover a:visited,
+kotobastock .ui-state-focus a,
+kotobastock .ui-state-focus a:hover,
+kotobastock .ui-state-focus a:link,
+kotobastock .ui-state-focus a:visited,
+akotobastock .ui-button:hover,
+akotobastock .ui-button:focus {
+	color: #2b2b2b;
+	text-decoration: none;
+}
+
+kotobastock .ui-visual-focus {
+	box-shadow: 0 0 3px 1px rgb(94, 158, 214);
+}
+kotobastock .ui-state-active,
+kotobastock .ui-widget-content .ui-state-active,
+kotobastock .ui-widget-header .ui-state-active,
+akotobastock .ui-button:active,
+kotobastock .ui-button:active,
+kotobastock .ui-button.ui-state-active:hover {
+	border: 1px solid #033569;
+	background: #b5dfe5;
+	font-weight: normal;
+	color: #ffffff;
+}
+kotobastock .ui-icon-background,
+kotobastock .ui-state-active .ui-icon-background {
+	border: #033569;
+	background-color: #ffffff;
+}
+kotobastock .ui-state-active a,
+kotobastock .ui-state-active a:link,
+kotobastock .ui-state-active a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+kotobastock .ui-state-highlight,
+kotobastock .ui-widget-content .ui-state-highlight,
+kotobastock .ui-widget-header .ui-state-highlight {
+	border: 1px solid #033569;
+	background: #ecdcf0;
+	color: #ffffff;
+}
+kotobastock .ui-state-checked {
+	border: 1px solid #033569;
+	background: #ecdcf0;
+}
+kotobastock .ui-state-highlight a,
+kotobastock .ui-widget-content .ui-state-highlight a,
+kotobastock .ui-widget-header .ui-state-highlight a {
+	color: #ffffff;
+}
+kotobastock .ui-state-error,
+kotobastock .ui-widget-content .ui-state-error,
+kotobastock .ui-widget-header .ui-state-error {
+	border: 1px solid #f0c5bd;
+	background: #fdfadf;
+	color: #e1684d;
+}
+kotobastock .ui-state-error a,
+kotobastock .ui-widget-content .ui-state-error a,
+kotobastock .ui-widget-header .ui-state-error a {
+	color: #e1684d;
+}
+kotobastock .ui-state-error-text,
+kotobastock .ui-widget-content .ui-state-error-text,
+kotobastock .ui-widget-header .ui-state-error-text {
+	color: #e1684d;
+}
+kotobastock .ui-priority-primary,
+kotobastock .ui-widget-content .ui-priority-primary,
+kotobastock .ui-widget-header .ui-priority-primary {
+	font-weight: bold;
+}
+kotobastock .ui-priority-secondary,
+kotobastock .ui-widget-content .ui-priority-secondary,
+kotobastock .ui-widget-header .ui-priority-secondary {
+	opacity: .7;
+	filter:Alpha(Opacity=70); /* support: IE8 */
+	font-weight: normal;
+}
+kotobastock .ui-state-disabled,
+kotobastock .ui-widget-content .ui-state-disabled,
+kotobastock .ui-widget-header .ui-state-disabled {
+	opacity: .35;
+	filter:Alpha(Opacity=35); /* support: IE8 */
+	background-image: none;
+}
+kotobastock .ui-state-disabled .ui-icon {
+	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
+}
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+kotobastock .ui-icon {
+	width: 16px;
+	height: 16px;
+}
+kotobastock .ui-icon,
+kotobastock .ui-widget-content .ui-icon {
+	background-image: url("images/ui-icons_033569_256x240.png");
+}
+kotobastock .ui-widget-header .ui-icon {
+	background-image: url("images/ui-icons_033569_256x240.png");
+}
+kotobastock .ui-state-hover .ui-icon,
+kotobastock .ui-state-focus .ui-icon,
+kotobastock .ui-button:hover .ui-icon,
+kotobastock .ui-button:focus .ui-icon {
+	background-image: url("images/ui-icons_555555_256x240.png");
+}
+kotobastock .ui-state-active .ui-icon,
+kotobastock .ui-button:active .ui-icon {
+	background-image: url("images/ui-icons_ffffff_256x240.png");
+}
+kotobastock .ui-state-highlight .ui-icon,
+kotobastock .ui-button .ui-state-highlight.ui-icon {
+	background-image: url("images/ui-icons_ffffff_256x240.png");
+}
+kotobastock .ui-state-error .ui-icon,
+kotobastock .ui-state-error-text .ui-icon {
+	background-image: url("images/ui-icons_e1684d_256x240.png");
+}
+kotobastock .ui-button .ui-icon {
+	background-image: url("images/ui-icons_777777_256x240.png");
+}
+
+/* positioning */
+kotobastock .ui-icon-blank { background-position: 16px 16px; }
+kotobastock .ui-icon-caret-1-n { background-position: 0 0; }
+kotobastock .ui-icon-caret-1-ne { background-position: -16px 0; }
+kotobastock .ui-icon-caret-1-e { background-position: -32px 0; }
+kotobastock .ui-icon-caret-1-se { background-position: -48px 0; }
+kotobastock .ui-icon-caret-1-s { background-position: -65px 0; }
+kotobastock .ui-icon-caret-1-sw { background-position: -80px 0; }
+kotobastock .ui-icon-caret-1-w { background-position: -96px 0; }
+kotobastock .ui-icon-caret-1-nw { background-position: -112px 0; }
+kotobastock .ui-icon-caret-2-n-s { background-position: -128px 0; }
+kotobastock .ui-icon-caret-2-e-w { background-position: -144px 0; }
+kotobastock .ui-icon-triangle-1-n { background-position: 0 -16px; }
+kotobastock .ui-icon-triangle-1-ne { background-position: -16px -16px; }
+kotobastock .ui-icon-triangle-1-e { background-position: -32px -16px; }
+kotobastock .ui-icon-triangle-1-se { background-position: -48px -16px; }
+kotobastock .ui-icon-triangle-1-s { background-position: -65px -16px; }
+kotobastock .ui-icon-triangle-1-sw { background-position: -80px -16px; }
+kotobastock .ui-icon-triangle-1-w { background-position: -96px -16px; }
+kotobastock .ui-icon-triangle-1-nw { background-position: -112px -16px; }
+kotobastock .ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+kotobastock .ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+kotobastock .ui-icon-arrow-1-n { background-position: 0 -32px; }
+kotobastock .ui-icon-arrow-1-ne { background-position: -16px -32px; }
+kotobastock .ui-icon-arrow-1-e { background-position: -32px -32px; }
+kotobastock .ui-icon-arrow-1-se { background-position: -48px -32px; }
+kotobastock .ui-icon-arrow-1-s { background-position: -65px -32px; }
+kotobastock .ui-icon-arrow-1-sw { background-position: -80px -32px; }
+kotobastock .ui-icon-arrow-1-w { background-position: -96px -32px; }
+kotobastock .ui-icon-arrow-1-nw { background-position: -112px -32px; }
+kotobastock .ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+kotobastock .ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+kotobastock .ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+kotobastock .ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+kotobastock .ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+kotobastock .ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+kotobastock .ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+kotobastock .ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+kotobastock .ui-icon-arrowthick-1-n { background-position: 1px -48px; }
+kotobastock .ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+kotobastock .ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+kotobastock .ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+kotobastock .ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+kotobastock .ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+kotobastock .ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+kotobastock .ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+kotobastock .ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+kotobastock .ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+kotobastock .ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+kotobastock .ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+kotobastock .ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+kotobastock .ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+kotobastock .ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+kotobastock .ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+kotobastock .ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+kotobastock .ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+kotobastock .ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+kotobastock .ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+kotobastock .ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+kotobastock .ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+kotobastock .ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+kotobastock .ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+kotobastock .ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+kotobastock .ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+kotobastock .ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+kotobastock .ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+kotobastock .ui-icon-arrow-4 { background-position: 0 -80px; }
+kotobastock .ui-icon-arrow-4-diag { background-position: -16px -80px; }
+kotobastock .ui-icon-extlink { background-position: -32px -80px; }
+kotobastock .ui-icon-newwin { background-position: -48px -80px; }
+kotobastock .ui-icon-refresh { background-position: -64px -80px; }
+kotobastock .ui-icon-shuffle { background-position: -80px -80px; }
+kotobastock .ui-icon-transfer-e-w { background-position: -96px -80px; }
+kotobastock .ui-icon-transferthick-e-w { background-position: -112px -80px; }
+kotobastock .ui-icon-folder-collapsed { background-position: 0 -96px; }
+kotobastock .ui-icon-folder-open { background-position: -16px -96px; }
+kotobastock .ui-icon-document { background-position: -32px -96px; }
+kotobastock .ui-icon-document-b { background-position: -48px -96px; }
+kotobastock .ui-icon-note { background-position: -64px -96px; }
+kotobastock .ui-icon-mail-closed { background-position: -80px -96px; }
+kotobastock .ui-icon-mail-open { background-position: -96px -96px; }
+kotobastock .ui-icon-suitcase { background-position: -112px -96px; }
+kotobastock .ui-icon-comment { background-position: -128px -96px; }
+kotobastock .ui-icon-person { background-position: -144px -96px; }
+kotobastock .ui-icon-print { background-position: -160px -96px; }
+kotobastock .ui-icon-trash { background-position: -176px -96px; }
+kotobastock .ui-icon-locked { background-position: -192px -96px; }
+kotobastock .ui-icon-unlocked { background-position: -208px -96px; }
+kotobastock .ui-icon-bookmark { background-position: -224px -96px; }
+kotobastock .ui-icon-tag { background-position: -240px -96px; }
+kotobastock .ui-icon-home { background-position: 0 -112px; }
+kotobastock .ui-icon-flag { background-position: -16px -112px; }
+kotobastock .ui-icon-calendar { background-position: -32px -112px; }
+kotobastock .ui-icon-cart { background-position: -48px -112px; }
+kotobastock .ui-icon-pencil { background-position: -64px -112px; }
+kotobastock .ui-icon-clock { background-position: -80px -112px; }
+kotobastock .ui-icon-disk { background-position: -96px -112px; }
+kotobastock .ui-icon-calculator { background-position: -112px -112px; }
+kotobastock .ui-icon-zoomin { background-position: -128px -112px; }
+kotobastock .ui-icon-zoomout { background-position: -144px -112px; }
+kotobastock .ui-icon-search { background-position: -160px -112px; }
+kotobastock .ui-icon-wrench { background-position: -176px -112px; }
+kotobastock .ui-icon-gear { background-position: -192px -112px; }
+kotobastock .ui-icon-heart { background-position: -208px -112px; }
+kotobastock .ui-icon-star { background-position: -224px -112px; }
+kotobastock .ui-icon-link { background-position: -240px -112px; }
+kotobastock .ui-icon-cancel { background-position: 0 -128px; }
+kotobastock .ui-icon-plus { background-position: -16px -128px; }
+kotobastock .ui-icon-plusthick { background-position: -32px -128px; }
+kotobastock .ui-icon-minus { background-position: -48px -128px; }
+kotobastock .ui-icon-minusthick { background-position: -64px -128px; }
+kotobastock .ui-icon-close { background-position: -80px -128px; }
+kotobastock .ui-icon-closethick { background-position: -96px -128px; }
+kotobastock .ui-icon-key { background-position: -112px -128px; }
+kotobastock .ui-icon-lightbulb { background-position: -128px -128px; }
+kotobastock .ui-icon-scissors { background-position: -144px -128px; }
+kotobastock .ui-icon-clipboard { background-position: -160px -128px; }
+kotobastock .ui-icon-copy { background-position: -176px -128px; }
+kotobastock .ui-icon-contact { background-position: -192px -128px; }
+kotobastock .ui-icon-image { background-position: -208px -128px; }
+kotobastock .ui-icon-video { background-position: -224px -128px; }
+kotobastock .ui-icon-script { background-position: -240px -128px; }
+kotobastock .ui-icon-alert { background-position: 0 -144px; }
+kotobastock .ui-icon-info { background-position: -16px -144px; }
+kotobastock .ui-icon-notice { background-position: -32px -144px; }
+kotobastock .ui-icon-help { background-position: -48px -144px; }
+kotobastock .ui-icon-check { background-position: -64px -144px; }
+kotobastock .ui-icon-bullet { background-position: -80px -144px; }
+kotobastock .ui-icon-radio-on { background-position: -96px -144px; }
+kotobastock .ui-icon-radio-off { background-position: -112px -144px; }
+kotobastock .ui-icon-pin-w { background-position: -128px -144px; }
+kotobastock .ui-icon-pin-s { background-position: -144px -144px; }
+kotobastock .ui-icon-play { background-position: 0 -160px; }
+kotobastock .ui-icon-pause { background-position: -16px -160px; }
+kotobastock .ui-icon-seek-next { background-position: -32px -160px; }
+kotobastock .ui-icon-seek-prev { background-position: -48px -160px; }
+kotobastock .ui-icon-seek-end { background-position: -64px -160px; }
+kotobastock .ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+kotobastock .ui-icon-seek-first { background-position: -80px -160px; }
+kotobastock .ui-icon-stop { background-position: -96px -160px; }
+kotobastock .ui-icon-eject { background-position: -112px -160px; }
+kotobastock .ui-icon-volume-off { background-position: -128px -160px; }
+kotobastock .ui-icon-volume-on { background-position: -144px -160px; }
+kotobastock .ui-icon-power { background-position: 0 -176px; }
+kotobastock .ui-icon-signal-diag { background-position: -16px -176px; }
+kotobastock .ui-icon-signal { background-position: -32px -176px; }
+kotobastock .ui-icon-battery-0 { background-position: -48px -176px; }
+kotobastock .ui-icon-battery-1 { background-position: -64px -176px; }
+kotobastock .ui-icon-battery-2 { background-position: -80px -176px; }
+kotobastock .ui-icon-battery-3 { background-position: -96px -176px; }
+kotobastock .ui-icon-circle-plus { background-position: 0 -192px; }
+kotobastock .ui-icon-circle-minus { background-position: -16px -192px; }
+kotobastock .ui-icon-circle-close { background-position: -32px -192px; }
+kotobastock .ui-icon-circle-triangle-e { background-position: -48px -192px; }
+kotobastock .ui-icon-circle-triangle-s { background-position: -64px -192px; }
+kotobastock .ui-icon-circle-triangle-w { background-position: -80px -192px; }
+kotobastock .ui-icon-circle-triangle-n { background-position: -96px -192px; }
+kotobastock .ui-icon-circle-arrow-e { background-position: -112px -192px; }
+kotobastock .ui-icon-circle-arrow-s { background-position: -128px -192px; }
+kotobastock .ui-icon-circle-arrow-w { background-position: -144px -192px; }
+kotobastock .ui-icon-circle-arrow-n { background-position: -160px -192px; }
+kotobastock .ui-icon-circle-zoomin { background-position: -176px -192px; }
+kotobastock .ui-icon-circle-zoomout { background-position: -192px -192px; }
+kotobastock .ui-icon-circle-check { background-position: -208px -192px; }
+kotobastock .ui-icon-circlesmall-plus { background-position: 0 -208px; }
+kotobastock .ui-icon-circlesmall-minus { background-position: -16px -208px; }
+kotobastock .ui-icon-circlesmall-close { background-position: -32px -208px; }
+kotobastock .ui-icon-squaresmall-plus { background-position: -48px -208px; }
+kotobastock .ui-icon-squaresmall-minus { background-position: -64px -208px; }
+kotobastock .ui-icon-squaresmall-close { background-position: -80px -208px; }
+kotobastock .ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+kotobastock .ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+kotobastock .ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+kotobastock .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+kotobastock .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+kotobastock .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+kotobastock .ui-corner-all,
+kotobastock .ui-corner-top,
+kotobastock .ui-corner-left,
+kotobastock .ui-corner-tl {
+	border-top-left-radius: 2px;
+}
+kotobastock .ui-corner-all,
+kotobastock .ui-corner-top,
+kotobastock .ui-corner-right,
+kotobastock .ui-corner-tr {
+	border-top-right-radius: 2px;
+}
+kotobastock .ui-corner-all,
+kotobastock .ui-corner-bottom,
+kotobastock .ui-corner-left,
+kotobastock .ui-corner-bl {
+	border-bottom-left-radius: 2px;
+}
+kotobastock .ui-corner-all,
+kotobastock .ui-corner-bottom,
+kotobastock .ui-corner-right,
+kotobastock .ui-corner-br {
+	border-bottom-right-radius: 2px;
+}
+
+/* Overlays */
+kotobastock .ui-widget-overlay {
+	background: #dcdcdc url("images/ui-bg_diamond-ripple_50_dcdcdc_22x22.png") 50% 50% repeat;
+	opacity: .3;
+	filter: Alpha(Opacity=30); /* support: IE8 */
+}
+kotobastock .ui-widget-shadow {
+	-webkit-box-shadow: 0px 0px 5px #666666;
+	box-shadow: 0px 0px 5px #666666;
+}

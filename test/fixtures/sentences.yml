@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  term_id: 1
+  concept_id: 1
+  source_id: 1
+  source_author_id: 1
+  url: MyString
+  body: MyText
+  favorite_count: 1
+
+two:
+  term_id: 1
+  concept_id: 1
+  source_id: 1
+  source_author_id: 1
+  url: MyString
+  body: MyText
+  favorite_count: 1

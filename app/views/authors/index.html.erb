@@ -1,0 +1,34 @@
+<div class="add-box">
+  <div class="add-inner">
+      <div class="add-tbl-title">引用作品作者一覧</div>
+        <div class="new-term-form">
+          <p id="notice"><%= notice %></p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Kana</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @authors.each do |term| %>
+                <tr>
+                  <td><%= author.name %></td>
+                  <td><%= author.kana %></td>
+                  <td><%= link_to 'Show', author %></td>
+                  <td><%= link_to 'Edit', edit_author_path(author) %></td>
+                  <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+          <br>
+
+          <%= link_to 'New Term', new_author_path %>
+        </div>
+  </div>
+</div>

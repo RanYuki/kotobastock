@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @sentence.term_id.word %>
+</p>
+
+<p>
+  <strong>Concept:</strong>
+  <%= @sentence.concept_id %>
+    <% unless @sentence.concepts.blank? %>
+      <ul>
+        <% @sentence.concept_list.each do |tag| %>
+          <li>
+            <%= link_to tag %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+</p>
+
+<p>
+  <strong>Source Category:</strong>
+  <%= @sentence.source_id.category %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @sentence.source_id.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @sentence.source.author_id.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @sentence.url %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @sentence.body %>
+</p>
+
+<%= link_to 'Edit', edit_sentence_path(@sentence) %> |
+<%= link_to 'Back', sentences_path %>

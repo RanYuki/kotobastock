@@ -1,0 +1,84 @@
+<div class="add-box">
+  <div class="add-inner">
+      <div class="add-tbl-title">新規例文登録</div>
+        <div class="new-term-form">
+          <%= form_with(model: sentence, local: true) do |form| %>
+            <% if sentence.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(sentence.errors.count, "error") %> prohibited this sentence from being saved:</h2>
+
+                <ul>
+                <% sentence.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="field">
+              <%= form.label "単語(ID)" %>
+              <%= form.number_field :term_id %>
+            </div>
+
+            <div class="field">
+              <%= form.label "例文" %>
+              <%= form.text_area :body %>
+            </div>
+
+            <%= form.fields_for :sources, @sentence.source do |so_form| %>
+
+                    <%= so_form.fields_for :authors, @sentence.source.author do |au_form| %>
+                          <div class="field">
+                            <%= au_form.label "その一文の出所（人物名）" %>
+                            <%= au_form.text_field :name %>
+                          </div>
+
+                          <div class="field">
+                            <%= au_form.label "人物名カナ" %>
+                            <%= au_form.text_field :kana %>
+                          </div>
+                    <% end %>
+
+                <div class="field">
+                  <%= so_form.label "一文の出所の種類" %>
+                  <%= so_form.text_field :category %>
+                </div>
+
+                <div class="field">
+                    <%= so_form.label "作品からの引用であれば、その作品名も入力してください" %>
+                    <%= so_form.text_field :title %>
+                </div>
+
+                <div class="field">
+                  <%= so_form.label "作品名カナ" %>
+                  <%= so_form.text_field :kana %>
+                </div>
+
+            <% end %>
+
+            <div class="field">
+              <%= form.label "URL" %>
+              <%= form.text_field :url %>
+            </div>
+
+            <div class="field sentence-tags-field">
+              <%= form.label "例文のコンセプト(タグ)" %>
+              <ul id="sentence-tags">
+                <%= form.text_field :concept_list, value: sentence.concept_list.join(",") %>
+              </ul>
+              <%# if @path.is('sentences#edit')%>
+              <%# end %>
+            </div>
+
+            <div class="field">
+              <%#= form.label :favorite_count %>
+              <%# form.number_field :favorite_count %>
+            </div>
+
+            <div class="actions">
+              <%= form.submit %>
+            </div>
+          <% end %>
+        </div>
+  </div>
+</div>

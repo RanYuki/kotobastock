@@ -1,0 +1,55 @@
+<div class="devise-box">
+  <div class="dev-index">
+    <div class="dev-index-inner">
+      <div class="dev-tbl-title">管理者情報編集 <%= resource_name.to_s.humanize %></div>
+
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="field dev-edit">
+          <%= f.label :名前 %><br />
+          <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+        </div>
+
+        <div class="field dev-edit">
+          <%= f.label :メール %><br />
+          <%= f.email_field :email, autocomplete: "email" %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="field dev-edit">
+          <%= f.label :新しいパスワード %><em><%= @minimum_password_length %> 文字以上</em><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+          <% if @minimum_password_length %>
+          <% end %>
+        </div>
+
+        <div class="field dev-edit">
+          <%= f.label :新しいパスワードをもう一度入力してください %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+
+        <div class="field dev-edit">
+          <%= f.label :旧パスワード %> <i>(データの変更には(旧)パスワードの入力が必須です)</i><br />
+          <%= f.password_field :current_password, autocomplete: "off" %>
+        </div>
+
+        <div class="actions dev-edit">
+          <%= f.submit "更新" %>
+        </div>
+      <% end %>
+
+      <div class="dev-edit">
+        <p>アカウントを削除する</p>
+
+        <%= button_to "削除", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+
+        <%= link_to "戻る", :back %>
+      </div>
+
+    </div>
+  </div>
+</div>

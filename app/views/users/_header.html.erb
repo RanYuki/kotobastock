@@ -1,0 +1,69 @@
+<header>
+    <nav class="navbar navbar-fixed-top headline">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"data-toggle="collapse"data-target="#navbarExample8">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="navbar-brand">
+          </div>
+          <% flash.each do |key, value| %>
+            <span class= "notice">
+              <span class= "alert alert-<%= key %>">
+                <span class="flash-message"><%= value %></span>
+              </span>
+            </span>
+          <% end %>
+        </div>
+
+      <% if user_signed_in? %>
+        <div class="collapse navbar-collapse" id="navbarExample8">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="">
+              トップ
+            </li>
+            <li class="">
+              マイページ
+            </li>
+            <li class="">
+              単語登録
+            </li>
+            <li class="">
+              例文登録
+            </li>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete, data:{ confirm:"ログアウトしてよろしいですか？", cancel:"Cancel", commit:"OK" }, class: "" do %>
+                ログアウト
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      <!-- ログインしていないときは以下を表示 -->
+      <% else %>
+        <div class="collapse navbar-collapse" id="navbarEexample8">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li class="header-buttons">
+              <%#= link_to top_path do %>
+                TOP
+              <%# end %>
+            </li>
+            <li class="header-buttons">
+              <%= link_to new_user_registration_path do %>
+                SignUp
+              <% end %>
+            </li>
+            <li class="header-buttons">
+              <%= link_to new_user_session_path do %>
+                LogIn
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+      </div>
+    </nav>
+  </header>

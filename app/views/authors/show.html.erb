@@ -1,0 +1,21 @@
+<div class="add-box">
+  <div class="add-inner">
+      <div class="add-tbl-title">作者詳細</div>
+        <div class="new-term-form">
+        	<p id="notice"><%= notice %></p>
+
+			<p>
+			  <strong>Name:</strong>
+			  <%= @author.name %>
+			</p>
+
+			<p>
+			  <strong>Kana:</strong>
+			  <%= @author.kana %>
+			</p>
+
+			<%= link_to 'Edit', edit_author_path(@author) %> |
+			<%= link_to 'Back', authors_path %>
+		</div>
+  </div>
+</div>
